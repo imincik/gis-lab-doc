@@ -1,0 +1,17 @@
+sphinx-env
+*.pyc
+*.mo
+*.swp
+.DS_Store
+Thumb.db
+desktop.ini
+*.*~
+*~
+build/*
+output
+build.log
+*.doctree
+.doctrees/
+#i18n/*
+live
+.idea
