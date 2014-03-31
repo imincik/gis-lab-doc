@@ -8,5 +8,4 @@ GIS.lab client environment
 
    gnu_free_documentation_license
    gnu_free_documentation_license
-   gnu_free_documentation_license
-   gnu_free_documentation_license
+
