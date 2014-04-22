@@ -43,9 +43,9 @@ Following directories are prepared for different levels of files sharing:
 
  * **Barrel** - free files sharing directory. All users can read and write any files
 
- .. tip::
-         To delete files from shared directories use **\[CTRL-Delete\]** keyboard shortcut, otherwise this operation will fail
-         because of missing Trash directory.
+.. tip::
+        To delete files from shared directories use **\[CTRL-Delete\]** keyboard shortcut, otherwise this operation will fail
+        because of missing Trash directory.
 
 Chat
 ====
