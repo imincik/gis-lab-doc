@@ -9,8 +9,11 @@ User account can belong to following user groups:
  * **labadmins** - administrators group
 
  
+Client start and stop
+*********************
+
 Client machine start
-********************
+=====================
 Physical client machine start is performed by pressing power button on machine correctly connected to |GL| network.
 
 Virtual client machine start is performed by pressing :menuselection:`Start` button in VirtualBox Manager.
@@ -22,7 +25,7 @@ Virtual client machine start is performed by pressing :menuselection:`Start` but
 
 
 Client session start
-********************
+====================
 To start a client session, choose language from list located in :menuselection:`Preferences --> Select Language`, enter login credentials on client login screen and press **\[ENTER\]**.
 
 .. figure:: /static/client_environment/client-login-screen.png
@@ -32,7 +35,7 @@ To start a client session, choose language from list located in :menuselection:`
 
 
 Client machine shut down
-************************
+========================
 Client machine shut down is available from menu :menuselection:`Preferences --> Shutdown` located on client login screen.
 
 .. figure:: /static/client_environment/client-shutdown-screen.png
