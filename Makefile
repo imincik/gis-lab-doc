@@ -1,4 +1,4 @@
-# Makefile for GIS.lab user manuals.
+# Makefile for GIS.lab documentations.
 
 # You can set these variables from the command line
 #LANGUAGES     = en `ls i18n`

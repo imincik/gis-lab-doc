@@ -41,13 +41,13 @@ we then can use this language to build language dependent switches #}
     </div>
     <div class="container">
       <p class="credit">
-        {{ _('Select graphics from <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>') }}
+        {{ _('Select graphics from <a href="http://thenounproject.com" target="_blank">The Noun Project collection.</a>') }} | 
+        {{ _('GIS.lab greatly benefits from work of <a href="credits/index.html" target="_blank">other Open Source projects.</a>') }}
         {# only on the frontpage (both of docs and site) we show the 'last updated'-message, making it possible to rsync the sites #}
         {% if (pagename == 'site/index' or pagename == 'docs/index') and last_updated %}
             {# % trans last_updated=last_updated|e %} - Last updated on {{ last_updated }}{% endtrans % #}
             {{ _(' - Last updated on ') }} {{ last_updated|e }}
         {% endif %}
-
       </p>
     </div>
   </footer>
@@ -131,7 +131,7 @@ http://stackoverflow.com/questions/13209597/override-html-page-template-for-a-sp
             <li><a href="{{ pathto('site/forusers/index') }}">{{_("For Users") }}</a></li>
             <li><a href="{{ pathto('site/getinvolved/index') }}">{{_("Get Involved") }}</a></li>
             <li><a href="{{ pathto('docs/index') }}">{{_("Documentation") }}</a></li>-->
-            <li><a href="{{ pathto('docs/index') }}">{{_("GIS.lab user manual") }}</a></li>
+            <li><a href="{{ pathto('docs/index') }}">{{_("GIS.lab documentation") }}</a></li>
             <li>{% block sidebarsearch %}
           {% include "searchbox.html" %}
         {% endblock %}</li>

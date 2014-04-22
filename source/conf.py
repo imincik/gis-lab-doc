@@ -187,6 +187,7 @@ rst_epilog = """
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |GL| replace:: GIS.lab
+.. |GLW| replace:: GIS.lab Web
 .. |QG| replace:: QGIS
 .. |CURRENT| replace:: 0.4
 .. |degrees| unicode:: 0x00B0

@@ -1,4 +1,4 @@
-GIS.lab user manuals.
+GIS.lab documantation.
 
 Building manuals
 ----------------
@@ -54,3 +54,9 @@ Then build:
 
     make html (to build the english language)
 
+
+Images
+------
+Use 1240 x 930 resolution to make full screen shots from GIS.lab client. To add it to docs, resize
+them to 620 x 465.
+Use 4px wide HTML cd0000 line for highlighting in screen shots.
