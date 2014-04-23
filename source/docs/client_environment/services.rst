@@ -17,12 +17,9 @@ Personal files storage
 
 User's home directory is pre-populated with following directories dedicated for personal data storage:
 
- * **Tmp** - storage of temporary or test files. This directory is excluded from backup (do not keep important files here)
+ * **Temporary** - storage of temporary or test files. This directory is excluded from backup (do not keep important files here)
  * **Downloads** - storage of downloaded files. Many applications like Firefox are automatically using this directory for downloads. This directory is also excluded from backup (move important downloads elsewhere from here)
- * **Documents** - storage for office documents
- * **Music** - storage for music files. Music applications automatically search here
- * **Pictures** - storage for pictures and photos. Picture and photo applications automatically search here
- * **Videos** - storage for video files
+ * **Documents** - documents storage
  * **Projects** - main working directory. This directory is recommend for storing project's data
 
 
