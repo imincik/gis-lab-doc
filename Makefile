@@ -15,11 +15,11 @@ BUILDDIR      = output
 # using the -A flag, we create a python variable named 'language', which
 # we then can use in html templates to create language dependent switches
 SPHINXOPTS    = -D language=$(LANG) -A language=$(LANG) $(SOURCEDIR)
-VERSION       = testing
+VERSION       = dev
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
-$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
+$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed.)
 endif
 
 # Internal variables.
@@ -82,7 +82,7 @@ localizeresources: clean
 
 html: localizeresources
 	$(SPHINXINTL) build -l $(LANG) -c $(SOURCEDIR)/conf.py
-	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG)
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(VERSION)/$(LANG)
 	@echo
 	@echo "HTML Build finished. The HTML pages for '$(LANG)' are in $(BUILDDIR)."
 
@@ -100,10 +100,10 @@ pdf: html
 	# as alternative we can use platex
 	# required parkage texlive-fonts-recommended
 	cd $(BUILDDIR)/latex/$(LANG); \
-	texi2pdf --quiet GISlab-client-environment.tex; \
-	texi2pdf --quiet GISlab-client-environment.tex; \
-	texi2pdf --quiet GISlab-client-environment.tex;
-	mv $(BUILDDIR)/latex/$(LANG)/GISlab-client-environment.pdf $(BUILDDIR)/pdf/$(LANG)/GISlab-$(VERSION)-client-environment.pdf
+	texi2pdf --quiet GISlab-documentation.tex; \
+	texi2pdf --quiet GISlab-documentation.tex; \
+	texi2pdf --quiet GISlab-documentation.tex;
+	mv $(BUILDDIR)/latex/$(LANG)/GISlab-documentation.pdf $(BUILDDIR)/pdf/$(LANG)/GISlab-$(VERSION)-documentation.pdf
 world: all
 
 all:
@@ -122,7 +122,7 @@ all:
 		mkdir -p live/html/$$LANG; \
 		mv live/html/$$LANG live/html/$$LANG.old; \
 		mv $(BUILDDIR)/html/$$LANG live/html/; \
-		cp $(BUILDDIR)/pdf/$$LANG/GISlab-$(VERSION)-client-environment.pdf live/html/pdf/GISlab-$(VERSION)-client-environment.pdf;  \
+		cp $(BUILDDIR)/pdf/$$LANG/GISlab-$(VERSION)-documentation.pdf live/html/pdf/GISlab-$(VERSION)-documentation.pdf;  \
 		rm -rf live/html/$$LANG.old; \
 	done
 
