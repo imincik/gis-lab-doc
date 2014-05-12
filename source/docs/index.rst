@@ -8,8 +8,8 @@ Welcome to |GL| !
    :maxdepth: 3
 
    Quick start <quick_start/index>
-   GIS.lab client environment <client_environment/index>
+   GIS.lab user manual <user_manual/index>
+   GIS.lab administrator manual <administrator_manual/index>
    Credits <credits/index>
-.. Basic GIS project creation <basic_gis_project/index>
 .. How To do <how_to_do/index>
 

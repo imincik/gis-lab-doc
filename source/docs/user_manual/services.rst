@@ -6,7 +6,7 @@ Files storage and sharing
 
 Home directory for personal data storage is created for each |GL| user. Additionally, structure of shared directories (each with different purpose and permissions) is available.
 
-.. figure:: /static/client_environment/client-home-files.png
+.. figure:: /static/user_manual/client_environment/client-home-files.png
    :align: center
 
    |GL| client home files
@@ -49,7 +49,7 @@ Chat
 
 |GL| comes with simple chat service for interactive messaging within |GL| network. In order to start using chat service, it is required to launch chat client in applications menu :menuselection:`Internet --> Pidgin Internet Messenger` (no additional configuration of access credentials is required). Than, chat client will stay connected until the end of user session.
 
-.. figure:: /static/client_environment/client-chat.png
+.. figure:: /static/user_manual/client_environment/client-chat.png
    :align: center
 
    |GL| chat
@@ -67,7 +67,7 @@ Shared geodatabase
 
 By default, each user is allowed to create database objects in his own database schema (think about schemas as directories). User's schema is readable only for it's owner. Manual permissions assignment is required to allow other user's access (:menuselection:`GIS.lab --> Shared Geo Database`).
 
-.. figure:: /static/client_environment/client-database.png
+.. figure:: /static/user_manual/client_environment/client-database.png
    :align: center
 
    |GL| database
@@ -78,7 +78,7 @@ GIS project creation, data processing and analysis
 
 |GL| provides unique, single tool capable to solve most of the ordinary GIS user's needs in one place. It is available via :menuselection:`GIS.lab --> GIS Project and Data Processing`.
 
-.. figure:: /static/client_environment/client-gis-project.png
+.. figure:: /static/user_manual/client_environment/client-gis-project.png
    :align: center
 
    GIS project creation, data processing and analysis

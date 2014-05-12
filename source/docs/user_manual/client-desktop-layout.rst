@@ -1,8 +1,8 @@
-Desktop layout
-**************
+Client Desktop layout
+*********************
 |GL| client environment is created by three basic features - *bottom panel*, *system informations panel* and *desktop canvas*.
 
-.. figure:: /static/client_environment/client-desktop-layout.png
+.. figure:: /static/user_manual/client_environment/client-desktop-layout.png
    :align: center
 
    |GL| client desktop layout (A-bottom panel, B-desktop canvas, C-system informations panel)
@@ -12,7 +12,7 @@ Bottom panel
 ============
 Bottom panel is the horizontal bar at the bottom of your screen.
 
-.. figure:: /static/client_environment/client-bottom-panel.png
+.. figure:: /static/user_manual/client_environment/client-bottom-panel.png
    :align: center
 
    |GL| client bottom panel
@@ -69,7 +69,7 @@ GIS.lab applications
 --------------------
 GIS.lab applications are available from :menuselection:`GIS.lab` menu.
 
-.. figure:: /static/client_environment/client-applications-gislab.png
+.. figure:: /static/user_manual/client_environment/client-applications-gislab.png
    :align: center
 
    |GL| applications
@@ -89,7 +89,7 @@ Log out
 User must log out to correctly finish work with |GL| client. :menuselection:`Log out` menu is available from applications launcher.
 Client machine shut down is available only from login screen.
 
-.. figure:: /static/client_environment/client-logout.png
+.. figure:: /static/user_manual/client_environment/client-logout.png
    :align: center
 
    |GL| client logout

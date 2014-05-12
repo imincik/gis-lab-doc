@@ -1,5 +1,5 @@
-Quick Start
-***********
+Read Me First
+*************
 
 .. warning:: Server installed to virtual machine contains its own DHCP server. DHCP server access is restricted by MAC addresses when GISLAB_UNKNOWN_MAC_POLICY=deny. Do not change this configuration when you are connecting to your corporate LAN and always consult it with your system administrator.
 
@@ -17,7 +17,7 @@ All lines beginning with *$* (dollar) character are shell commands which must be
 
 **On Windows**, open Command Prompt window in :menuselection:`Start > Accessories > Command Prompt` or :menuselection:`Start`, type *cmd* and hit **\[Enter\]** menu.
 
-.. note:: You can open Command Prompt in chosen directory via **\[Shift + RightMouseClick\]** on white space and choosing *Open command window here*.
+.. tip:: You can open Command Prompt in chosen directory via **\[Shift + RightMouseClick\]** on white space and choosing *Open command window here*.
 
 .. figure:: /static/quick_start/installation/cmd_windows.png
    :align: center
@@ -33,7 +33,7 @@ Terminology
 
 
 Installation on Linux and Windows
-=================================
+*********************************
 
 Software requirements
 ---------------------
@@ -132,12 +132,12 @@ Install |GL| and create user account
 
 
 Client machine launch
-=====================
+*********************
 It is possible to launch |GL| client in two modes - *Physical client* or *VirtualBox client* mode.  
 
 If you do not changed value of *GISLAB_UNKNOWN_MAC_POLICY* in configuration file *config.cfg* to *allow*, you need to allow MAC address of each client in *GISLAB_CLIENTS_ALLOWED* configuration.  
 
-.. note:: If you do not know MAC addresses of client machines, good way to collect them, is to simply try to boot them from |GL| server and than run following command to get list of denied MAC addresses on server. ::
+.. tip:: If you do not know MAC addresses of client machines, good way to collect them, is to simply try to boot them from |GL| server and than run following command to get list of denied MAC addresses on server. ::
 
    $ vagrant ssh -c "sudo grep -e 'DHCPDISCOVER.*no free leases' /var/log/syslog"
 
@@ -151,7 +151,7 @@ After configuring your client machine to boot from LAN you will be able to succe
 
 
 |GL| project
-============
+************
 .. note:: Following steps are created from the perspective of user *lab1*. If you choose to use another user account, replace string *lab1* with your user name in all steps.
 
 * log in to |GL| client machine using *lab1* account with password *lab* and copy example Natural Earth data from *~/Repository* directory to *~/Share/lab* directory
@@ -245,7 +245,7 @@ Publish project with |GL| Web
    GIS.lab Web application
 
 Client machine stop
-===================
+*******************
 Once you are done with your work, log out from client machine and choose **\[Shut down\]** in :menuselection:`Preferences` menu at login screen to shut down whole |GL| server run command :: 
 
    $ vagrant halt
