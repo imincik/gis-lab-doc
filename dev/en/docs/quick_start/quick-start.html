@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Read Me First</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../../_static/images/favicon.ico?1322140996"/>
+    <link rel="top" title="" href="../../index.html" />
+    <link rel="up" title="Quick Start" href="index.html" />
+    <link rel="next" title="GIS.lab User Manual" href="../user_manual/index.html" />
+    <link rel="prev" title="Quick Start" href="index.html" />
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../user_manual/index.html" title="GIS.lab User Manual"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Quick Start"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html"></a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Quick Start</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../index.html">GIS.lab</a>
+        <span class="navbar-text pull-left"><b>0.4</b></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="English">English</option>
+<!--  <option value="ca_ES" title="Catalan">Catalan</option>
+  <option value="da_DK" title="Danish">Dansk</option>
+  <option value="de" title="German">Deutsch</option>
+  <option value="es" title="Spanish">Español</option>
+  <option value="fa" title="Persian">فارسی</option>
+  <option value="fi" title="Finnish">Suomalainen</option>
+  <option value="fr" title="French">Français</option>
+  <option value="id" title="Indonesian">Bahasa Indonesia</option>
+  <option value="it" title="Italian">Italiano</option>
+  <option value="ja" title="Japanese">日本語</option>
+  <option value="ko_KR" title="Korean">한국어</option>
+  <option value="nl" title="Dutch">Nederlands</option>
+  <option value="pt_PT" title="Portuguese">Português</option>
+  <option value="ro" title="Romanian">Română</option>
+  <option value="ru" title="Russian">Русский</option>
+  <option value="zh_CN" title="Chinese (China)">中文</option>
+  <option value="zh_TW" title="Chinese (Taiwan)">Chinese (Taiwan)</option> -->
+</select>
+
+<script>
+    var currentPage = 'docs/quick_start/quick-start.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // put some style around the current locale flag, we have to remove the '/' here
+        // this is for the flags:
+        //$('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');
+        // set language select to current lang
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+    });
+
+    // load current page in a different language
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../index.html">GIS.lab documentation</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="index.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="../user_manual/index.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll">
+<h3><a href="../index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Quick start</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Read Me First</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#terminology">Terminology</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-on-linux-and-windows">Installation on Linux and Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#software-requirements">Software requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-virtualbox-on-linux">Install VirtualBox on Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-virtualbox-on-windows">Install VirtualBox on Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-vagrant-on-linux">Install Vagrant on Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-vagrant-on-windows">Install Vagrant on Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-vagrant-box-on-linux-and-windows">Install Vagrant Box on Linux and Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download-gl">Download GIS.lab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configure-gl">Configure GIS.lab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-gl-and-create-user-account">Install GIS.lab and create user account</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#client-machine-launch">Client machine launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gl-project">GIS.lab project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-project-creation-and-publishing">Create project creation and publishing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publish-project-with-gl-web">Publish project with GIS.lab Web</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#client-machine-stop">Client machine stop</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_manual/index.html">GIS.lab user manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../administrator_manual/index.html">GIS.lab administrator manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits/index.html">Credits</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="read-me-first">
+<h1>Read Me First<a class="headerlink" href="#read-me-first" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Server installed to virtual machine contains its own DHCP server. DHCP server access is restricted by MAC addresses when GISLAB_UNKNOWN_MAC_POLICY=deny. Do not change this configuration when you are connecting to your corporate LAN and always consult it with your system administrator.</p>
+</div>
+<p>You are absolutely safe to install with <em>GISLAB_UNKNOWN_MAC_POLICY=allow</em> on machine without Ethernet connection to any existing LAN.
+Installation will NOT modify anything on your host machine. Every operation is done inside of virtual machine.</p>
+<p>All lines beginning with <em>$</em> (dollar) character are shell commands which must be run in command window. In most cases you can copy and paste commands from this page, but sometimes you will need to modify them little bit to suite to your conditions.</p>
+<p><strong>On Linux</strong>, open terminal window in <em class="menuselection">Accessories &gt; Terminal Emulator</em> menu.</p>
+<div class="figure align-center">
+<img alt="../../_images/terminal-window-linux.png" src="../../_images/terminal-window-linux.png" />
+<p class="caption">Terminal window on Linux</p>
+</div>
+<p><strong>On Windows</strong>, open Command Prompt window in <em class="menuselection">Start &gt; Accessories &gt; Command Prompt</em> or <em class="menuselection">Start</em>, type <em>cmd</em> and hit <strong>[Enter]</strong> menu.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">You can open Command Prompt in chosen directory via <strong>[Shift + RightMouseClick]</strong> on white space and choosing <em>Open command window here</em>.</p>
+</div>
+<div class="figure align-center">
+<img alt="../../_images/cmd_windows.png" src="../../_images/cmd_windows.png" />
+<p class="caption">Command prompt on Windows</p>
+</div>
+<div class="section" id="terminology">
+<h2>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>host machine - main machine where Vagrant, VirtualBox and GIS.lab package is installed</li>
+<li>GIS.lab server - GIS.lab server environment which runs as virtualized system on <em>host machine</em></li>
+<li>client machine - machine which runs GIS.lab client system launched from GIS.lab server</li>
+<li>GIS.lab client - GIS.lab client environment which runs on <em>client machine</em></li>
+</ul>
+</div>
+</div>
+<div class="section" id="installation-on-linux-and-windows">
+<h1>Installation on Linux and Windows<a class="headerlink" href="#installation-on-linux-and-windows" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="software-requirements">
+<h2>Software requirements<a class="headerlink" href="#software-requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>host machine with working Linux, Windows or Mac OSX operating system (in our case Xubuntu 12.04.2 LTS and Windows 7)</li>
+<li>VirtualBox</li>
+<li>Vagrant 1.5 or higher</li>
+</ul>
+</div>
+<div class="section" id="install-virtualbox-on-linux">
+<h2>Install VirtualBox on Linux<a class="headerlink" href="#install-virtualbox-on-linux" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">add VirtualBox repository’s key</p>
+<div class="highlight-python"><pre>$ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -</pre>
+</div>
+</li>
+<li><p class="first">add VirtualBox repository to system</p>
+<div class="highlight-python"><pre>$ sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian precise contrib" &gt;&gt; /etc/apt/sources.list'</pre>
+</div>
+</li>
+<li><p class="first">install Dynamic Kernel Module Support Framework</p>
+<div class="highlight-python"><pre>$ sudo apt-get update &amp;&amp; sudo apt-get install dkms</pre>
+</div>
+</li>
+<li><p class="first">install VirtualBox</p>
+<div class="highlight-python"><pre>$ sudo apt-get install virtualbox-4.3</pre>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="install-virtualbox-on-windows">
+<h2>Install VirtualBox on Windows<a class="headerlink" href="#install-virtualbox-on-windows" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>download VirtualBox installer from <a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a> (VirtualBox for Windows hosts version)</li>
+<li>install VirtualBox by running the installer wizard using default settings</li>
+</ul>
+</div>
+<div class="section" id="install-vagrant-on-linux">
+<h2>Install Vagrant on Linux<a class="headerlink" href="#install-vagrant-on-linux" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">remove previously downloaded Vagrant packages</p>
+<div class="highlight-python"><pre>$ rm -vf ~/Downloads/vagrant_*.deb</pre>
+</div>
+</li>
+<li><p class="first">download Vagrant from <a class="reference external" href="http://www.vagrantup.com/downloads.html">http://www.vagrantup.com/downloads.html</a></p>
+</li>
+<li><p class="first">install package</p>
+<div class="highlight-python"><pre>$ sudo dpkg -i ~/Downloads/vagrant_*.deb
+$ sudo apt-get -f install</pre>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="install-vagrant-on-windows">
+<h2>Install Vagrant on Windows<a class="headerlink" href="#install-vagrant-on-windows" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>download Vagrant from <a class="reference external" href="http://www.vagrantup.com/downloads.html">http://www.vagrantup.com/downloads.html</a> (Windows Universal version)</li>
+<li>install Vagrant by running the installer wizard using default settings</li>
+<li>after installation you will be asked to restart your PC</li>
+</ul>
+</div>
+<div class="section" id="install-vagrant-box-on-linux-and-windows">
+<h2>Install Vagrant Box on Linux and Windows<a class="headerlink" href="#install-vagrant-box-on-linux-and-windows" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">run command to download base operating system image (you can run this command from whatever directory)</p>
+<div class="highlight-python"><pre>$ vagrant box add precise32-canonical http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-i386-vagrant-disk1.box</pre>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Enter above command in one line.</p>
+</div>
+</div>
+<div class="section" id="download-gl">
+<h2>Download GIS.lab<a class="headerlink" href="#download-gl" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>download latest GIS.lab package from <a class="reference external" href="https://github.com/imincik/gis-lab/releases/latest">https://github.com/imincik/gis-lab/releases/latest</a></li>
+<li>unpack GIS.lab package in your working directory</li>
+</ul>
+</div>
+<div class="section" id="configure-gl">
+<h2>Configure GIS.lab<a class="headerlink" href="#configure-gl" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>move to directory where you have extracted GIS.lab package</li>
+<li>open configuration file <em>config.cfg</em> in plain text editor (Leafpad, Mousepad, Gedit on Linux or Notepad, Notepad++ on Windows)</li>
+<li>add client machines MAC addresses to <em>GISLAB_CLIENTS_ALLOWED</em> (recommended)</li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/config.cfg.png" src="../../_images/config.cfg.png" />
+<p class="caption">File config.cfg</p>
+</div>
+<p>or</p>
+<p>set GISLAB_UNKNOWN_MAC_POLICY=allow to allow all MACs (see warning at a top of this page)</p>
+</div>
+<div class="section" id="install-gl-and-create-user-account">
+<h2>Install GIS.lab and create user account<a class="headerlink" href="#install-gl-and-create-user-account" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">move to directory where you have extracted GIS.lab package (you should already be there)</p>
+</li>
+<li><p class="first">run installation command</p>
+<div class="highlight-python"><pre>$ vagrant up</pre>
+</div>
+</li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/vagrant_up.png" src="../../_images/vagrant_up.png" />
+<p class="caption">vagrant up command output</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Installation can take to run from 20 minutes to few hours, depending on your machine and Internet speed.
+If your machine contains multiple network adapters, you will be asked to choose one. Select one corresponding to your wired network adapter (on Linux it is usually &#8216;eth0&#8217;)</p>
+</div>
+<ul>
+<li><p class="first">create user account <em>lab</em> with password <em>lab</em></p>
+<div class="highlight-python"><pre>$ vagrant ssh -c "sudo gislab-adduser -g User -l GIS.lab -m lab1@gis.lab -p lab lab"</pre>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="client-machine-launch">
+<h1>Client machine launch<a class="headerlink" href="#client-machine-launch" title="Permalink to this headline">¶</a></h1>
+<p>It is possible to launch GIS.lab client in two modes - <em>Physical client</em> or <em>VirtualBox client</em> mode.</p>
+<p>If you do not changed value of <em>GISLAB_UNKNOWN_MAC_POLICY</em> in configuration file <em>config.cfg</em> to <em>allow</em>, you need to allow MAC address of each client in <em>GISLAB_CLIENTS_ALLOWED</em> configuration.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>If you do not know MAC addresses of client machines, good way to collect them, is to simply try to boot them from GIS.lab server and than run following command to get list of denied MAC addresses on server.</p>
+<div class="last highlight-python"><pre>$ vagrant ssh -c "sudo grep -e 'DHCPDISCOVER.*no free leases' /var/log/syslog"</pre>
+</div>
+</div>
+<p>Add collected MAC addresses to <em>GISLAB_CLIENTS_ALLOWED</em> configuration and do not forget to run</p>
+<div class="highlight-python"><pre>$ vagrant ssh -c "sudo gislab-clients-allowed"</pre>
+</div>
+<p>to load them.</p>
+<p>After configuring your client machine to boot from LAN you will be able to successfully launch GIS.lab client session.</p>
+</div>
+<div class="section" id="gl-project">
+<h1>GIS.lab project<a class="headerlink" href="#gl-project" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Following steps are created from the perspective of user <em>lab1</em>. If you choose to use another user account, replace string <em>lab1</em> with your user name in all steps.</p>
+</div>
+<ul class="simple">
+<li>log in to GIS.lab client machine using <em>lab1</em> account with password <em>lab</em> and copy example Natural Earth data from <em>~/Repository</em> directory to <em>~/Share/lab</em> directory</li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/01_copy_data.png" src="../../_images/01_copy_data.png" />
+<p class="caption">Data copying</p>
+</div>
+<div class="section" id="create-project-creation-and-publishing">
+<h2>Create project creation and publishing<a class="headerlink" href="#create-project-creation-and-publishing" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>launch <em>GIS Project and Data Processing</em> application (QGIS) (<em class="menuselection">GIS.lab &gt; GIS Project and Data Processing</em>)</li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/02_gis_project_and_data_processing.png" src="../../_images/02_gis_project_and_data_processing.png" />
+<p class="caption">GIS Project and Data Processing application (QGIS)</p>
+</div>
+<ul class="simple">
+<li>save empty project as <em>~Share/lab1/first.qgs</em> (<em class="menuselection">Project &gt; Save as</em>)</li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/03_save_project_as.png" src="../../_images/03_save_project_as.png" />
+<p class="caption">Saving project</p>
+</div>
+<ul class="simple">
+<li>add new SpatiaLite layers database connection (<em class="menuselection">Layer &gt; Add SpatiaLite Layer &gt; New</em>)</li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/05_connect_spatialite_layers.png" src="../../_images/05_connect_spatialite_layers.png" />
+<p class="caption">Connecting SpatiaLite layers</p>
+</div>
+<ul class="simple">
+<li>browse Natural Earth database file in <em>~/Share/lab1/natural-earth/natural-earth.sqlite</em></li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/06_browse_spatialite_file.png" src="../../_images/06_browse_spatialite_file.png" />
+<p class="caption">Browsing SpatiaLite database file</p>
+</div>
+<ul class="simple">
+<li>load previously connected Natural Earth layers (<em class="menuselection">Layer &gt; Add SpatiaLite Layer &gt; Connect</em>) and select required layers (<strong>[CTRL + left mouse click]</strong>)</li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/07_load_layers.png" src="../../_images/07_load_layers.png" />
+<p class="caption">Loading layers</p>
+</div>
+<ul class="simple">
+<li>browse loaded layers in map canvas</li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/08_browse_layers.png" src="../../_images/08_browse_layers.png" />
+<p class="caption">Browsing loaded layers</p>
+</div>
+<ul class="simple">
+<li>set project projection to <em>EPSG:3857</em> and activate on-the-fly CRS transformation in (<em class="menuselection">Project &gt; Project Properties &gt; CRS</em>) and click <strong>[Apply]</strong></li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/11_project_crs.png" src="../../_images/11_project_crs.png" />
+<p class="caption">Setting project projection</p>
+</div>
+<ul class="simple">
+<li>Browse layers in Pseudo Mercator (EPSG:3857)</li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/12_browse_layers_3857.png" src="../../_images/12_browse_layers_3857.png" />
+<p class="caption">Browsing layers in Pseudo Mercator</p>
+</div>
+<ul class="simple">
+<li>Set OWS server properties</li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/14_ows_server_properties.png" src="../../_images/14_ows_server_properties.png" />
+<p class="caption">Setting OWS server properties</p>
+</div>
+<ul class="simple">
+<li>Finally save project again (<em class="menuselection">Project &gt; Save</em>)</li>
+</ul>
+</div>
+<div class="section" id="publish-project-with-gl-web">
+<h2>Publish project with GIS.lab Web<a class="headerlink" href="#publish-project-with-gl-web" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>publish your project by clicking on GIS.lab Web icon and pressing <strong>[Publish]</strong> button in dialog window</li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/18_publish_project.png" src="../../_images/18_publish_project.png" />
+<p class="caption">Project publishing</p>
+</div>
+<ul class="simple">
+<li>enjoy GIS.lab Web application.</li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/19_gislab_web.png" src="../../_images/19_gislab_web.png" />
+<p class="caption">GIS.lab Web application</p>
+</div>
+</div>
+</div>
+<div class="section" id="client-machine-stop">
+<h1>Client machine stop<a class="headerlink" href="#client-machine-stop" title="Permalink to this headline">¶</a></h1>
+<p>Once you are done with your work, log out from client machine and choose <strong>[Shut down]</strong> in <em class="menuselection">Preferences</em> menu at login screen to shut down whole GIS.lab server run command</p>
+<div class="highlight-python"><pre>$ vagrant halt</pre>
+</div>
+<p>which will take server virtual machine to <em>power off</em> state.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Make sure that all client machines are off before running halt command.</p>
+</div>
+<p>You will be able to turn server on again by running</p>
+<div class="highlight-python"><pre>$ vagrant up</pre>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../user_manual/index.html" title="GIS.lab User Manual"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Quick Start"
+             >previous</a> |</li>
+        <li><a href="../index.html"></a> &raquo;</li>
+          <li><a href="index.html" >Quick Start</a> &raquo;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <!--<li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>-->
+          </ul>
+        </div>
+
+        <p class="credit">If not stated otherwise, all content is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Select graphics from <a href="http://thenounproject.com" target="_blank">The Noun Project collection.</a> | 
+        GIS.lab greatly benefits from work of <a href="credits/credits.html" target="_blank">other Open Source projects.</a>
+        
+        
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

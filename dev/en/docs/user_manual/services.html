@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Services</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../../_static/images/favicon.ico?1322140996"/>
+    <link rel="top" title="" href="../../index.html" />
+    <link rel="up" title="GIS.lab User Manual" href="index.html" />
+    <link rel="next" title="GIS.lab Administrator Manual" href="../administrator_manual/index.html" />
+    <link rel="prev" title="Client Desktop layout" href="client-desktop-layout.html" />
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../administrator_manual/index.html" title="GIS.lab Administrator Manual"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="client-desktop-layout.html" title="Client Desktop layout"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html"></a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">GIS.lab User Manual</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../index.html">GIS.lab</a>
+        <span class="navbar-text pull-left"><b>0.4</b></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="English">English</option>
+<!--  <option value="ca_ES" title="Catalan">Catalan</option>
+  <option value="da_DK" title="Danish">Dansk</option>
+  <option value="de" title="German">Deutsch</option>
+  <option value="es" title="Spanish">Español</option>
+  <option value="fa" title="Persian">فارسی</option>
+  <option value="fi" title="Finnish">Suomalainen</option>
+  <option value="fr" title="French">Français</option>
+  <option value="id" title="Indonesian">Bahasa Indonesia</option>
+  <option value="it" title="Italian">Italiano</option>
+  <option value="ja" title="Japanese">日本語</option>
+  <option value="ko_KR" title="Korean">한국어</option>
+  <option value="nl" title="Dutch">Nederlands</option>
+  <option value="pt_PT" title="Portuguese">Português</option>
+  <option value="ro" title="Romanian">Română</option>
+  <option value="ru" title="Russian">Русский</option>
+  <option value="zh_CN" title="Chinese (China)">中文</option>
+  <option value="zh_TW" title="Chinese (Taiwan)">Chinese (Taiwan)</option> -->
+</select>
+
+<script>
+    var currentPage = 'docs/user_manual/services.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // put some style around the current locale flag, we have to remove the '/' here
+        // this is for the flags:
+        //$('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');
+        // set language select to current lang
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+    });
+
+    // load current page in a different language
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../index.html">GIS.lab documentation</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="client-desktop-layout.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="../administrator_manual/index.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll">
+<h3><a href="../index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quick_start/index.html">Quick start</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">GIS.lab user manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="client-login-logout.html">User accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client-login-logout.html#client-start-and-stop">Client start and stop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client-desktop-layout.html">Client Desktop layout</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#files-storage-and-sharing">Files storage and sharing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chat">Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shared-geodatabase">Shared geodatabase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gis-project-creation-data-processing-and-analysis">GIS project creation, data processing and analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gis-project-publishing">GIS project publishing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../administrator_manual/index.html">GIS.lab administrator manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits/index.html">Credits</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="services">
+<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="files-storage-and-sharing">
+<h2>Files storage and sharing<a class="headerlink" href="#files-storage-and-sharing" title="Permalink to this headline">¶</a></h2>
+<p>Home directory for personal data storage is created for each GIS.lab user. Additionally, structure of shared directories (each with different purpose and permissions) is available.</p>
+<div class="figure align-center">
+<img alt="../../_images/client-home-files.png" src="../../_images/client-home-files.png" />
+<p class="caption">GIS.lab client home files</p>
+</div>
+<div class="section" id="personal-files-storage">
+<h3>Personal files storage<a class="headerlink" href="#personal-files-storage" title="Permalink to this headline">¶</a></h3>
+<p>User&#8217;s home directory is pre-populated with following directories dedicated for personal data storage:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Temporary</strong> - storage of temporary or test files. This directory is excluded from backup (do not keep important files here)</li>
+<li><strong>Downloads</strong> - storage of downloaded files. Many applications like Firefox are automatically using this directory for downloads. This directory is also excluded from backup (move important downloads elsewhere from here)</li>
+<li><strong>Documents</strong> - documents storage</li>
+<li><strong>Projects</strong> - main working directory. This directory is recommend for storing project&#8217;s data</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="files-sharing">
+<h3>Files sharing<a class="headerlink" href="#files-sharing" title="Permalink to this headline">¶</a></h3>
+<p>Following directories are prepared for different levels of files sharing:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Repository</strong> - data installed by GIS.lab administrator<ul>
+<li>administrators (members of labadmins group) - read and write permissions</li>
+<li>all users - read permissions</li>
+</ul>
+</li>
+<li><strong>Share</strong> - directory contains personal shared subdirectories owned by GIS.lab users. All data and project files for GIS.lab Web must be placed here<ul>
+<li>directory owner - read and write permissions</li>
+<li>all users - read permissions</li>
+</ul>
+</li>
+<li><strong>Barrel</strong> - free files sharing directory. All users can read and write any files</li>
+</ul>
+</div></blockquote>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">To delete files from shared directories use <strong>[CTRL-Delete]</strong> keyboard shortcut, otherwise this operation will fail
+because of missing Trash directory.</p>
+</div>
+</div>
+</div>
+<div class="section" id="chat">
+<h2>Chat<a class="headerlink" href="#chat" title="Permalink to this headline">¶</a></h2>
+<p>GIS.lab comes with simple chat service for interactive messaging within GIS.lab network. In order to start using chat service, it is required to launch chat client in applications menu <em class="menuselection">Internet ‣ Pidgin Internet Messenger</em> (no additional configuration of access credentials is required). Than, chat client will stay connected until the end of user session.</p>
+<div class="figure align-center">
+<img alt="../../_images/client-chat.png" src="../../_images/client-chat.png" />
+<p class="caption">GIS.lab chat</p>
+</div>
+<p>By default, all messages are posted in chat room and are readable for each user. It is possible to start private chat, by choosing user in right pan.</p>
+<p>WARNING: all messages, including private messages, are send WITHOUT encryption. Do NOT use chat for sending confidential data without additional encryption.</p>
+</div>
+<div class="section" id="shared-geodatabase">
+<h2>Shared geodatabase<a class="headerlink" href="#shared-geodatabase" title="Permalink to this headline">¶</a></h2>
+<p>GIS.lab provides shared database storage with spatial support for tabular and vector data. Storage for each GIS.lab user is available in database called <strong>gislab</strong>. Access to this database is preconfigured in all GIS tools provided by GIS.lab.</p>
+<p>By default, each user is allowed to create database objects in his own database schema (think about schemas as directories). User&#8217;s schema is readable only for it&#8217;s owner. Manual permissions assignment is required to allow other user&#8217;s access (<em class="menuselection">GIS.lab ‣ Shared Geo Database</em>).</p>
+<div class="figure align-center">
+<img alt="../../_images/client-database.png" src="../../_images/client-database.png" />
+<p class="caption">GIS.lab database</p>
+</div>
+</div>
+<div class="section" id="gis-project-creation-data-processing-and-analysis">
+<h2>GIS project creation, data processing and analysis<a class="headerlink" href="#gis-project-creation-data-processing-and-analysis" title="Permalink to this headline">¶</a></h2>
+<p>GIS.lab provides unique, single tool capable to solve most of the ordinary GIS user&#8217;s needs in one place. It is available via <em class="menuselection">GIS.lab ‣ GIS Project and Data Processing</em>.</p>
+<div class="figure align-center">
+<img alt="../../_images/client-gis-project.png" src="../../_images/client-gis-project.png" />
+<p class="caption">GIS project creation, data processing and analysis</p>
+</div>
+<p><strong>Features</strong></p>
+<ul class="simple">
+<li><strong>File formats</strong> - AutoCAD DXF, ESRI Shapefile, GeoJSON, GML, GeoJPEG, KML, Microstation DGN v.7, OpenStreetMap XML and PBF, SQLite/SpatiaLite, TIFF/GeoTIFF</li>
+<li><strong>Geodatabases</strong> - PostgreSQL/PostGIS, MS SQL Spatial, Oracle Spatial</li>
+<li><strong>Base maps</strong> - OGC WMS services or public on-line maps like OpenStreetMap</li>
+<li><strong>Advanced vector data editing</strong></li>
+<li><strong>Vector and raster data analysis</strong></li>
+<li><strong>Print output creation</strong> - output maps can include legends, labels, scalebar, vector shapes and arrows, tables and html content (landscape or portrait) and can be produced in PNG or PDF format</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>GIS project creation, data processing and analysis</em> is based on QGIS 2.2. In addition, it contains bug fix updates and some custom features.</p>
+</div>
+</div>
+<div class="section" id="gis-project-publishing">
+<h2>GIS project publishing<a class="headerlink" href="#gis-project-publishing" title="Permalink to this headline">¶</a></h2>
+<p>TODO: will be done after GIS.lab Web plugin will be updated.</p>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../administrator_manual/index.html" title="GIS.lab Administrator Manual"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="client-desktop-layout.html" title="Client Desktop layout"
+             >previous</a> |</li>
+        <li><a href="../index.html"></a> &raquo;</li>
+          <li><a href="index.html" >GIS.lab User Manual</a> &raquo;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <!--<li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>-->
+          </ul>
+        </div>
+
+        <p class="credit">If not stated otherwise, all content is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Select graphics from <a href="http://thenounproject.com" target="_blank">The Noun Project collection.</a> | 
+        GIS.lab greatly benefits from work of <a href="credits/credits.html" target="_blank">other Open Source projects.</a>
+        
+        
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

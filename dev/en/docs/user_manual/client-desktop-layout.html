@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Client Desktop layout</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../../_static/images/favicon.ico?1322140996"/>
+    <link rel="top" title="" href="../../index.html" />
+    <link rel="up" title="GIS.lab User Manual" href="index.html" />
+    <link rel="next" title="Services" href="services.html" />
+    <link rel="prev" title="User accounts" href="client-login-logout.html" />
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="services.html" title="Services"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="client-login-logout.html" title="User accounts"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html"></a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">GIS.lab User Manual</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../index.html">GIS.lab</a>
+        <span class="navbar-text pull-left"><b>0.4</b></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="English">English</option>
+<!--  <option value="ca_ES" title="Catalan">Catalan</option>
+  <option value="da_DK" title="Danish">Dansk</option>
+  <option value="de" title="German">Deutsch</option>
+  <option value="es" title="Spanish">Español</option>
+  <option value="fa" title="Persian">فارسی</option>
+  <option value="fi" title="Finnish">Suomalainen</option>
+  <option value="fr" title="French">Français</option>
+  <option value="id" title="Indonesian">Bahasa Indonesia</option>
+  <option value="it" title="Italian">Italiano</option>
+  <option value="ja" title="Japanese">日本語</option>
+  <option value="ko_KR" title="Korean">한국어</option>
+  <option value="nl" title="Dutch">Nederlands</option>
+  <option value="pt_PT" title="Portuguese">Português</option>
+  <option value="ro" title="Romanian">Română</option>
+  <option value="ru" title="Russian">Русский</option>
+  <option value="zh_CN" title="Chinese (China)">中文</option>
+  <option value="zh_TW" title="Chinese (Taiwan)">Chinese (Taiwan)</option> -->
+</select>
+
+<script>
+    var currentPage = 'docs/user_manual/client-desktop-layout.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // put some style around the current locale flag, we have to remove the '/' here
+        // this is for the flags:
+        //$('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');
+        // set language select to current lang
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+    });
+
+    // load current page in a different language
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../index.html">GIS.lab documentation</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="client-login-logout.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="services.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll">
+<h3><a href="../index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quick_start/index.html">Quick start</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">GIS.lab user manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="client-login-logout.html">User accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client-login-logout.html#client-start-and-stop">Client start and stop</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Client Desktop layout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bottom-panel">Bottom panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#system-informations-panel">System informations panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#desktop-canvas">Desktop canvas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="services.html">Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../administrator_manual/index.html">GIS.lab administrator manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits/index.html">Credits</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="client-desktop-layout">
+<h1>Client Desktop layout<a class="headerlink" href="#client-desktop-layout" title="Permalink to this headline">¶</a></h1>
+<p>GIS.lab client environment is created by three basic features - <em>bottom panel</em>, <em>system informations panel</em> and <em>desktop canvas</em>.</p>
+<div class="figure align-center">
+<img alt="../../_images/client-desktop-layout.png" src="../../_images/client-desktop-layout.png" />
+<p class="caption">GIS.lab client desktop layout (A-bottom panel, B-desktop canvas, C-system informations panel)</p>
+</div>
+<div class="section" id="bottom-panel">
+<h2>Bottom panel<a class="headerlink" href="#bottom-panel" title="Permalink to this headline">¶</a></h2>
+<p>Bottom panel is the horizontal bar at the bottom of your screen.</p>
+<div class="figure align-center">
+<img alt="../../_images/client-bottom-panel.png" src="../../_images/client-bottom-panel.png" />
+<p class="caption">GIS.lab client bottom panel</p>
+</div>
+<p>Bottom panel is always visible and contains following sections:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>applications launcher (1)</strong> - list of all available applications, settings and log out menu</li>
+<li><strong>quick launcher (2)</strong> - home directory browser, launchers of the most frequently used applications</li>
+<li><strong>virtual desktops (3)</strong> - virtual desktops switcher and overview</li>
+<li><strong>running applications (4)</strong> - running applications list and switcher</li>
+<li><strong>keyboard layout (5)</strong> - available keyboard layouts switcher</li>
+<li><strong>tray (6)</strong> - battery status, messaging status, sound control and network status</li>
+<li><strong>calendar (7)</strong> - day and time information and calendar</li>
+</ul>
+</div></blockquote>
+<div class="section" id="non-gis-applications">
+<h3>Non GIS applications<a class="headerlink" href="#non-gis-applications" title="Permalink to this headline">¶</a></h3>
+<p>GIS.lab offers comprehensive list of applications for basic office work. Here is a list of the most important ones:</p>
+<p><strong>Accessories</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Calculator</strong> - calculator</li>
+<li><strong>KeePassX</strong> - secure personal data management</li>
+<li><strong>Leafpad</strong> - plain text editor</li>
+<li><strong>Screenshot</strong> - screen shots creator</li>
+</ul>
+</div></blockquote>
+<p><strong>Graphics</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>GIMP Image Editor</strong> - raster images editor</li>
+<li><strong>Inkscape</strong> - vector drawings editor</li>
+</ul>
+</div></blockquote>
+<p><strong>Internet</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Firefox Web Browser</strong> - Internet browser</li>
+<li><strong>Google Earth</strong> - 3D earth browser from Google</li>
+<li><strong>Pidgin Internet Messenger</strong> - GIS.lab chat client</li>
+</ul>
+</div></blockquote>
+<p><strong>Multimedia</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>VLC media player</strong> - video and media player</li>
+</ul>
+</div></blockquote>
+<p><strong>Office</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>LibreOffice Calc</strong> - spreadsheet editor</li>
+<li><strong>LibreOffice Impress</strong> - presentations editor</li>
+<li><strong>LibreOffice Writer</strong> - text editor</li>
+</ul>
+</div></blockquote>
+<p><strong>System</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>GIS.lab client informations</strong> - GIS.lab client informations summary important for technical support</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="gis-lab-applications">
+<h3>GIS.lab applications<a class="headerlink" href="#gis-lab-applications" title="Permalink to this headline">¶</a></h3>
+<p>GIS.lab applications are available from <em class="menuselection">GIS.lab</em> menu.</p>
+<div class="figure align-center">
+<img alt="../../_images/client-applications-gislab.png" src="../../_images/client-applications-gislab.png" />
+<p class="caption">GIS.lab applications</p>
+</div>
+<p><strong>GIS.lab</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>GIS Project and Data Processing</strong> - GIS project creation, data processing, analysis and project publishing</li>
+<li><strong>Empty GIS.lab Web Project</strong> - empty GIS.lab Web project launcher</li>
+<li><strong>Shared Geo Database</strong> - PostgreSQL/PostGIS database management</li>
+<li><strong>Personal Geo Database</strong> - SpatiaLite database management</li>
+<li><strong>OpenStreetMap Database</strong> - OpenStreetMap database management</li>
+<li><strong>Documentation</strong> - GIS.lab documentation launcher</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="log-out">
+<h3>Log out<a class="headerlink" href="#log-out" title="Permalink to this headline">¶</a></h3>
+<p>User must log out to correctly finish work with GIS.lab client. <em class="menuselection">Log out</em> menu is available from applications launcher.
+Client machine shut down is available only from login screen.</p>
+<div class="figure align-center">
+<img alt="../../_images/client-logout.png" src="../../_images/client-logout.png" />
+<p class="caption">GIS.lab client logout</p>
+</div>
+</div>
+</div>
+<div class="section" id="system-informations-panel">
+<h2>System informations panel<a class="headerlink" href="#system-informations-panel" title="Permalink to this headline">¶</a></h2>
+<p>System informations panel is the horizontal bar at the top of your screen and contains useful informations like <em>current user and host name</em>, <em>up time</em>, <em>system load</em>, <em>CPU</em>, <em>RAM</em>, <em>SWAP</em> and <em>network</em> usage.</p>
+</div>
+<div class="section" id="desktop-canvas">
+<h2>Desktop canvas<a class="headerlink" href="#desktop-canvas" title="Permalink to this headline">¶</a></h2>
+<p>Desktop canvas is the area covering all your screen. By default it contains <em>user home directory launcher</em> icon. We do not recommend to save more content to desktop canvas as it is covered by opened applications most of the time. To browse home directory we recommend to use <em>home directory browser</em> located on bottom panel.</p>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="services.html" title="Services"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="client-login-logout.html" title="User accounts"
+             >previous</a> |</li>
+        <li><a href="../index.html"></a> &raquo;</li>
+          <li><a href="index.html" >GIS.lab User Manual</a> &raquo;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <!--<li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>-->
+          </ul>
+        </div>
+
+        <p class="credit">If not stated otherwise, all content is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Select graphics from <a href="http://thenounproject.com" target="_blank">The Noun Project collection.</a> | 
+        GIS.lab greatly benefits from work of <a href="credits/credits.html" target="_blank">other Open Source projects.</a>
+        
+        
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
