@@ -7,6 +7,7 @@ Welcome to |GL| !
 .. toctree::
    :maxdepth: 3
 
+   Quick start <quick_start/index>
    GIS.lab client environment <client_environment/index>
    Credits <credits/index>
 .. Basic GIS project creation <basic_gis_project/index>
