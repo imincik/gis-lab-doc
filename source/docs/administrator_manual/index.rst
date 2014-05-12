@@ -6,4 +6,6 @@ GIS.lab Administrator Manual
 .. toctree::
    :maxdepth: 2
 
-   todo
+   management-commands
+   plugins
+   client-modes
